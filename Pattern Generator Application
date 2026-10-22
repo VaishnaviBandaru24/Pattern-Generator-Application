@@ -1,0 +1,122 @@
+#include <stdio.h>
+int main() {
+    int main_choice, sub_choice, size;
+    int i, j, count = 1;
+    printf("======================================\n");
+    printf("  PATTERN GENERATOR APPLICATION\n"); printf("======================================\n\n");
+    printf("1. Star Patterns\n"); 
+    printf("2. Number Patterns\n"); 
+    printf("3. Alphabet Patterns\n"); 
+    printf("4. Exit\n"); 
+    printf("--------------------------------------\n"); 
+    printf("Enter your choice: "); 
+    scanf("%d", &main_choice);
+
+    
+    if (main_choice == 1) {
+        printf("\n--- Star Patterns ---\n\n"); 
+        printf("1. Square Pattern\n"); //
+        printf("2. Right Triangle Pattern\n\n"); 
+        printf("Enter your choice: "); 
+        scanf("%d", &sub_choice);
+
+        if (sub_choice == 1) {
+            printf("Enter the size: "); 
+            scanf("%d", &size);
+
+            for (i = 1; i <= size; i++) {
+                for (j = 1; j <= size; j++) {
+printf("* "); 
+                }
+                printf("\n");
+            }
+        } else if (sub_choice == 2) {
+            printf("Enter the size: "); 
+            scanf("%d", &size);
+
+            for (i = 1; i <= size; i++) {
+                for (j = 1; j <= i; j++) {
+                    printf("* "); 
+                }
+                printf("\n");
+            }
+        } else {
+            printf("Invalid input. Program terminated.\n"); 
+        }
+    }
+    
+    else if (main_choice == 2) {
+        printf("\n--- Number Patterns ---\n\n");
+        printf("1. Increasing Number Triangle\n"); 
+        printf("2. Floyd's Triangle\n\n"); 
+        printf("Enter your choice: "); 
+        scanf("%d", &sub_choice);
+
+        if (sub_choice == 1) {
+            printf("Enter the size: "); 
+scanf("%d", &size);
+
+            for (i = 1; i <= size; i++) {
+                for (j = 1; j <= i; j++) {
+                    printf("%d ", j); 
+                }
+                printf("\n");
+            }
+        } else if (sub_choice == 2) {
+            printf("Enter the size: "); 
+            scanf("%d", &size);
+
+            for (i = 1; i <= size; i++) {
+                for (j = 1; j <= i; j++) {
+                    printf("%d ", count);
+                    count++;
+                }
+                printf("\n");
+            }
+        } else {
+            printf("Invalid input. Program terminated.\n"); 
+        }
+    }
+    
+    else if (main_choice == 3) {
+        printf("\n--- Alphabet Patterns ---\n\n"); 
+        printf("1. Increasing Alphabet Triangle\n"); 
+        printf("2. Repeated Alphabet Triangle\n\n"); 
+        printf("Enter your choice: "); 
+        scanf("%d", &sub_choice);
+
+        if (sub_choice == 1) {
+            printf("Enter the size: "); 
+            scanf("%d", &size);
+
+            for (i = 0; i < size; i++) {
+                for (j = 0; j <= i; j++) {
+                    printf("%c ", 'A' + j); 
+                }
+                printf("\n");
+            }
+        } else if (sub_choice == 2) {
+            printf("Enter the size: "); 
+            scanf("%d", &size);
+for (i = 0; i < size; i++) {
+                for (j = 0; j <= i; j++) {
+                    printf("%c ", 'A' + i); 
+                }
+                printf("\n");
+            }
+        } else {
+            printf("Invalid input. Program terminated.\n"); 
+        }
+    }
+    
+    else if (main_choice == 4) {
+        return 0;
+    }
+    
+    else {
+        printf("Invalid input. Program terminated.\n"); 
+    }
+
+    return 0;
+}
+             
